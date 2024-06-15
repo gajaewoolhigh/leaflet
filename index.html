@@ -1,93 +1,249 @@
 <!DOCTYPE html>
+<html lang="ko"><!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>학교 축제 리플렛</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: rgba(248, 222, 171, 0.52);
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            font-family: 'Do Hyeon', sans-serif;
         }
+
         .container {
-            background-color: white;
-            width: 90%;
+            width: 100%;
             max-width: 800px;
-            margin: 20px;
-            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
         }
+
         .header {
             text-align: center;
         }
+
+        .header h1 {
+            color: #4d2602;
+            margin: 0;
+        }
+
+        .header p {
+            color: #c40909;
+        }
+
         .header img {
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 0 auto 20px;
+            margin: 0 auto 10px;
         }
-        .header h1 {
-            color: #333;
-            margin: 0;
-        }
-        .header p {
-            color: #666;
-        }
+
         .content {
             margin-top: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
         }
+
         .content h2 {
             color: #333;
         }
+
         .content p {
             color: #666;
             margin: 10px 0;
         }
-        .floor-plan {
-            margin-top: 20px;
+
+
+
+        .calendar {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            text-align: center;
+
         }
+
+        .calendar-header {
+            background-color: #9ae8e8;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .calendar-header h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
+            background-color: #2cb3bd;
+        }
+
+        .calendar-grid div {
+            background-color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .calendar-grid .day-header {
+            background-color: #9ae8e8;
+            color: white;
+        }
+
+        .highlight {
+            color: #ff3b4b;
+        }
+
+        .floor-plan {
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .floor-plan h2 {
+            text-align: center;
+            color: #333;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
+            font-size: 12px;
         }
+
         table, th, td {
-            border: 1px solid #333;
+            border: 1px solid #ddd;
         }
+
         th, td {
             padding: 10px;
             text-align: center;
         }
+
+        th {
+            background-color: #9ae8e8;
+            color: white;
+            font-weight: 700;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f1f1f1;
+        }
+
         .footer {
             margin-top: 20px;
             text-align: center;
             color: #999;
             font-size: 12px;
+            padding: 10px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        @media (max-width: 600px) {
+            .floor-plan table, .floor-plan th, .floor-plan td {
+                font-size: 10px;
+            }
+            .floor-plan th, .floor-plan td {
+                padding: 6px;
+            }
+        }
+
+        .title {
+            text-align: center;
+            color: #333;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #333;
+            margin-top: 40px;
+            font-size: 1.2em;
+        }
+
+        .performance-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .performance-item {
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .sub-performance-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0 0 20px;
+        }
+
+        .sub-performance-item {
+            margin: 5px 0;
+            padding: 5px;
+            border-radius: 3px;
         }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="header">
-        <img src="image/poster.png" alt=""/>
-
-        <h1>학교 축제에 초대합니다!</h1>
-        <p>함께 즐거운 시간을 보내요.</p>
+        <img src="image/main.png" alt=""/>
+        <h1>뜨거운 여름, 시원한 축제!</h1>
+        <p>가재울고등학교 울림제에 초대합니다.</p>
     </div>
     <div class="content">
         <h2>행사 안내</h2>
-        <p><strong>일시:</strong> 2024년 6월 15일</p>
-        <p><strong>시간:</strong> 오후 3시</p>
-        <p><strong>장소:</strong> 학교 운동장</p>
+        <p><strong>일시:</strong> 2024년 7월 18일</p>
+        <p><strong>시간:</strong> 오전 8시 30분 ~ 오후 3시 30분</p>
+        <p><strong>장소:</strong> <a href="https://naver.me/57wOiNVX">가재울고등학교</a></p>
     </div>
+    <div class="calendar">
+        <div class="calendar-header">
+            <h2>2024년 7월</h2>
+        </div>
+        <div class="calendar-grid">
+            <div class="day-header">일</div>
+            <div class="day-header">월</div>
+            <div class="day-header">화</div>
+            <div class="day-header">수</div>
+            <div class="day-header">목</div>
+            <div class="day-header">금</div>
+            <div class="day-header">토</div>
+
+            <!-- Days of the month -->
+            <div></div><div></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
+            <div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div>
+            <div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div class="highlight">18</div><div>19</div>
+            <div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div>
+            <div>27</div><div>28</div><div>29</div><div>30</div><div>31</div><div></div><div></div>
+        </div>
+    </div>
+
     <div class="floor-plan">
-        <h2>배치도</h2>
+        <h2>부스 배치도</h2>
         <table>
             <tr>
                 <th>층</th>
@@ -95,33 +251,35 @@
             </tr>
             <tr>
                 <td>5층</td>
-                <td colspan="2">공용교실(대)</td>
+                <td colspan="3">공용교실(대)</td>
                 <td>2-5</td>
                 <td>2-6</td>
                 <td>2-7</td>
+                <td>2-8</td>
             </tr>
             <tr>
                 <td></td>
-                <td colspan="2">국제시사탐구토론</td>
+                <td colspan="3">국제시사탐구토론</td>
                 <td>오이</td>
                 <td>심리탐구 1</td>
                 <td>심리탐구 2</td>
+                <td>도서부</td>
             </tr>
             <tr>
                 <td>4층</td>
-                <td>스터디카페 - 데카콘</td>
                 <td>1-7</td>
                 <td>1-8</td>
                 <td>2-1</td>
+                <td>2-2</td>
                 <td>2-3</td>
                 <td>2-4</td>
             </tr>
             <tr>
                 <td></td>
-                <td>데카콘</td>
                 <td>메디하트</td>
                 <td>방송반</td>
                 <td>미술반</td>
+                <td>데카콘</td>
                 <td>바움</td>
                 <td>학생회</td>
             </tr>
@@ -144,18 +302,53 @@
                 <td>학생회</td>
                 <td>생물화학</td>
                 <td>물리화학실험탐구</td>
-
-            </tr>
-            <tr>
-                <td>2층</td>
-                <td colspan="6">도서관</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td  colspan="6">도서부</td>
             </tr>
         </table>
     </div>
+    <h1 class="title">울림제 공연</h1>
+    <h2 class="section-title">[1부] 3학년 공연</h2>
+    <ul class="performance-list">
+        <li class="performance-item"><strong>사회 오프닝</strong> - 배경음악 : 해변의 여인(쿨)</li>
+        <li class="performance-item"><strong>숭실대학교 응원단 위너스</strong></li>
+        <li class="performance-item"><strong>댄스부 sdd</strong> - 곡 : 슈가코트(나띠), 십중팔구(nine out of ten), 내가 제일 잘나가(2ne1), takitaki (dj snake), baggy jeans (nct u), industry baby(lil nas x, jack harlow)</li>
+        <li class="performance-item"><strong>학생회 깜짝 공연</strong> - 곡 : DREAM (백현, 수지), Thrill ride (더보이즈)</li>
+        <li class="performance-item"><strong>매월 승리/박건희</strong> - 곡 : 야인(), Credit()</li>
+        <li class="performance-item"><strong>가재울 숲튽훈/박수아 팀</strong> - 곡 : Honey (김장훈)</li>
+        <li class="performance-item"><strong>댄스부 illusion</strong> - 곡 : DM(프로미스나인), smart(르세라핌), nobody knows(키스오브라이프), beatbox(nct dream), 바다보러갈래(효린)</li>
+        <li class="performance-item"><strong>밴드부 daystar</strong> - 곡 : 주지마(로꼬,화사), 인사(범진), 200%(악동뮤지션), 비밀번호486(윤하), 허니(박진영), 애상(쿨), 붉은노을(이문세)</li>
+        <li class="performance-item"><strong>사회 엔딩</strong></li>
+        <li class="performance-item"><strong>3학년 담임 선생님들 응원 영상</strong></li>
+        <li class="performance-item"><strong>나가실 때</strong> - 비타오백 드리기 - 배경음악 : 나인틴(세븐틴)</li>
+    </ul>
+    <h2 class="section-title">[2부] 1, 2학년 공연</h2>
+    <ul class="performance-list">
+        <li class="performance-item"><strong>1부 오프닝 사회</strong> - 배경음악 : 다시 여기 바닷가(싹쓰리)</li>
+        <li class="performance-item"><strong>연극부 데아트론</strong> - 극 : 꽃보다가재</li>
+        <li class="performance-item"><strong>댄스부 illusion</strong> - 곡 : DM(프로미스나인), smart(르세라핌), nobody knows(키스오브라이프), beatbox(nct dream), 바다보러갈래(효린)</li>
+        <li class="performance-item"><strong>쮸쌤의 댄싱스타/김채연 팀</strong> - 곡 : oh little girl(슬레이트), 첫만남은 계획대로 되지 않아(투어스)</li>
+        <li class="performance-item"><strong>복면가왕</strong>
+            <ul class="sub-performance-list">
+                <li class="sub-performance-item">1. 바나나 알러지 개코원숭이 팀 : 낮밤(이영지)</li>
+                <li class="sub-performance-item">2. 얘야 노래란 이렇게 하는 법이란다 팀 : 한여름밤의 꿀(산이)</li>
+                <li class="sub-performance-item">3. 내 음색에 반할수박에 팀 : 응급실(이지)</li>
+                <li class="sub-performance-item">4. 너가 자는 사이 고막살인 팀 : 눈코입(태양)</li>
+                <li class="sub-performance-item">5. 우리는 자연을 사랑합니다 팀 : 모든날 모든순간(폴킴)</li>
+            </ul>
+        </li>
+        <li class="performance-item"><strong>학생회 깜짝 공연</strong> - 곡 : Thrill ride (더보이즈)</li>
+        <li class="performance-item"><strong>쉬는시간</strong></li>
+        <li class="performance-item"><strong>2부 오프닝 사회</strong> - 배경음악 : 해변의 여인(쿨)</li>
+        <li class="performance-item"><strong>복면가왕 1등 발표 및 우승 팀 앵콜</strong></li>
+        <li class="performance-item"><strong>댄스부 Sdd</strong> - 곡 : 슈가코트(나띠), 십중팔구(nine out of ten), 내가 제일 잘나가(2ne1), takitaki (dj snake), baggy jeans (nct u), industry baby(lil nas x, jack harlow)</li>
+        <li class="performance-item"><strong>MC공연</strong> - 곡 : Dream (백현, 수지)</li>
+        <li class="performance-item"><strong>아이리스/양윤지 팀</strong> - 곡 : eft&right(세븐틴), 덤디덤디(여자아이들)</li>
+        <li class="performance-item"><strong>뽕따/이예은 팀</strong> - 곡 : 애상(쿨)</li>
+        <li class="performance-item"><strong>F5/김세원 팀</strong> - 곡 : attention(뉴진스), 헐(블락비), 댄스브레이크(블랙핑크)</li>
+        <li class="performance-item"><strong>밴드부 daystar</strong> - 곡 : 주지마(로꼬,화사), 인사(범진), 200%(악동뮤지션), 비밀번호486(윤하), 허니(박진영), 애상(쿨), 붉은노을(이문세)</li>
+        <li class="performance-item"><strong>엔딩 사회</strong> - 배경음악 : 에이틴(세븐틴)</li>
+    </ul>
+
+
     <div class="footer">
         <p>리플렛을 QR코드로 다른 친구들에게도 공유해주세요.</p>
         <img src="image/qrcode.png" alt="" style="display: block; margin: 0 auto; max-width: 150px;"/>
