@@ -33,9 +33,8 @@
             text-align: center;
         }
 
-        .header h1 {
+        h1 {
             color: #4d2602;
-            margin: 0;
         }
 
         .header p {
@@ -64,6 +63,7 @@
             color: #666;
             margin: 10px 0;
         }
+
         .notice ul {
             list-style-type: none;
             padding: 0;
@@ -83,8 +83,6 @@
             padding: 10px;
             text-align: left;
         }
-
-
 
 
         .calendar {
@@ -209,16 +207,11 @@
             }
         }
 
-        .title {
-            text-align: center;
-            color: #333;
-        }
 
         .section-title {
-            text-align: center;
             color: #333;
-            margin-top: 40px;
             font-size: 1.2em;
+            margin: 0
         }
 
         .performance-list {
@@ -266,7 +259,7 @@
             </ul>
         </div>
         <div class="content">
-            <h2>행사 안내</h2>
+            <h1>행사 안내</h1>
             <p><strong>일시:</strong> 2024년 7월 18일</p>
             <p><strong>시간:</strong> 오전 8시 ~ 오후 3시 30분</p>
             <p><strong>장소:</strong> <a href="https://naver.me/57wOiNVX">가재울고등학교</a></p>
@@ -286,17 +279,46 @@
             <div class="day-header">금</div>
             <div class="day-header">토</div>
 
-            <!-- Days of the month -->
-            <div></div><div></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
-            <div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div>
-            <div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div class="highlight">18</div><div>19</div>
-            <div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div>
-            <div>27</div><div>28</div><div>29</div><div>30</div><div>31</div><div></div><div></div>
+            <div></div>
+            <div></div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+            <div>14</div>
+            <div>15</div>
+            <div>16</div>
+            <div>17</div>
+            <div class="highlight">18</div>
+            <div>19</div>
+            <div>20</div>
+            <div>21</div>
+            <div>22</div>
+            <div>23</div>
+            <div>24</div>
+            <div>25</div>
+            <div>26</div>
+            <div>27</div>
+            <div>28</div>
+            <div>29</div>
+            <div>30</div>
+            <div>31</div>
+            <div></div>
+            <div></div>
         </div>
     </div>
 
     <div class="floor-plan">
-        <h2>부스 배치도</h2>
+        <h1>부스 배치도</h1>
         <table>
             <tr>
                 <th>층</th>
@@ -325,7 +347,7 @@
                 <td>2-1</td>
                 <td>2-2</td>
                 <td>2-3</td>
-                <td>2-4</td>
+                <td colspan="2">2-4</td>
             </tr>
             <tr>
                 <td></td>
@@ -334,7 +356,7 @@
                 <td>미술반</td>
                 <td>데카콘</td>
                 <td>바움</td>
-                <td>학생회</td>
+                <td colspan="2">학생회</td>
             </tr>
             <tr>
                 <td>3층</td>
@@ -361,43 +383,43 @@
     <h1 class="title">울림제 공연</h1>
     <h2 class="section-title">[1부] 3학년 공연</h2>
     <ul class="performance-list">
-        <li class="performance-item"><strong>오프닝</strong> </li>
-        <li class="performance-item"><strong>숭실대학교 응원단 위너스</strong> </li>
-        <li class="performance-item"><strong>댄스부 sdd</strong> </li>
-        <li class="performance-item"><strong>학생회 깜짝 공연</strong> </li>
-        <li class="performance-item"><strong>매월 승리/박건희</strong> </li>
-        <li class="performance-item"><strong>가재울 숲튽훈/박수아 팀</strong> </li>
-        <li class="performance-item"><strong>댄스부 illusion</strong> </li>
-        <li class="performance-item"><strong>밴드부 daystar</strong> </li>
+        <li class="performance-item"><strong>오프닝</strong></li>
+        <li class="performance-item"><strong>숭실대학교 응원단 위너스</strong></li>
+        <li class="performance-item"><strong>댄스부 sdd</strong></li>
+        <li class="performance-item"><strong>학생회 깜짝 공연</strong></li>
+        <li class="performance-item"><strong>매월 승리/박건희</strong></li>
+        <li class="performance-item"><strong>가재울 숲튽훈/박수아 팀</strong></li>
+        <li class="performance-item"><strong>댄스부 illusion</strong></li>
+        <li class="performance-item"><strong>밴드부 daystar</strong></li>
         <li class="performance-item"><strong>엔딩</strong></li>
 
     </ul>
     <h2 class="section-title">[2부] 1, 2학년 공연</h2>
     <ul class="performance-list">
-        <li class="performance-item"><strong>1부 오프닝</strong> </li>
+        <li class="performance-item"><strong>1부 오프닝</strong></li>
         <li class="performance-item"><strong>연극부 데아트론</strong> - 꽃보다가재</li>
-        <li class="performance-item"><strong>댄스부 illusion</strong> </li>
-        <li class="performance-item"><strong>쮸쌤의 댄싱스타/김채연 팀</strong> </li>
+        <li class="performance-item"><strong>댄스부 illusion</strong></li>
+        <li class="performance-item"><strong>쮸쌤의 댄싱스타/김채연 팀</strong></li>
         <li class="performance-item"><strong>복면가왕</strong>
             <ul class="sub-performance-list">
-                <li class="sub-performance-item">1. 바나나 알러지 개코원숭이 팀 </li>
-                <li class="sub-performance-item">2. 얘야 노래란 이렇게 하는 법이란다 팀 </li>
-                <li class="sub-performance-item">3. 내 음색에 반할수박에 팀 </li>
-                <li class="sub-performance-item">4. 너가 자는 사이 고막살인 팀 </li>
-                <li class="sub-performance-item">5. 우리는 자연을 사랑합니다 팀 </li>
+                <li class="sub-performance-item">1. 바나나 알러지 개코원숭이 팀</li>
+                <li class="sub-performance-item">2. 얘야 노래란 이렇게 하는 법이란다 팀</li>
+                <li class="sub-performance-item">3. 내 음색에 반할수박에 팀</li>
+                <li class="sub-performance-item">4. 너가 자는 사이 고막살인 팀</li>
+                <li class="sub-performance-item">5. 우리는 자연을 사랑합니다 팀</li>
             </ul>
         </li>
-        <li class="performance-item"><strong>학생회 깜짝 공연</strong> </li>
+        <li class="performance-item"><strong>학생회 깜짝 공연</strong></li>
         <li class="performance-item"><strong>쉬는시간, 경품 추첨 </strong></li>
-        <li class="performance-item"><strong>2부 오프닝</strong> </li>
+        <li class="performance-item"><strong>2부 오프닝</strong></li>
         <li class="performance-item"><strong>복면가왕 1등 발표 및 우승 팀 앵콜</strong></li>
-        <li class="performance-item"><strong>댄스부 Sdd</strong> </li>
-        <li class="performance-item"><strong>MC공연</strong> </li>
-        <li class="performance-item"><strong>아이리스/양윤지 팀</strong> </li>
-        <li class="performance-item"><strong>뽕따/이예은 팀</strong> </li>
-        <li class="performance-item"><strong>F5/김세원 팀</strong> </li>
-        <li class="performance-item"><strong>밴드부 daystar</strong> </li>
-        <li class="performance-item"><strong>엔딩</strong> </li>
+        <li class="performance-item"><strong>댄스부 Sdd</strong></li>
+        <li class="performance-item"><strong>MC공연</strong></li>
+        <li class="performance-item"><strong>아이리스/양윤지 팀</strong></li>
+        <li class="performance-item"><strong>뽕따/이예은 팀</strong></li>
+        <li class="performance-item"><strong>F5/김세원 팀</strong></li>
+        <li class="performance-item"><strong>밴드부 daystar</strong></li>
+        <li class="performance-item"><strong>엔딩</strong></li>
     </ul>
 
 
