@@ -18,14 +18,14 @@
             align-items: center;
             flex-direction: column;
             font-family: 'Do Hyeon', sans-serif;
+            text-align: center;
         }
 
         .container {
-            width: 100%;
             max-width: 800px;
+            margin: 0 auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
             padding: 20px;
         }
 
@@ -64,15 +64,36 @@
             color: #666;
             margin: 10px 0;
         }
+        .notice ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .notice li {
+            margin: 5px 0;
+        }
+
+        .notice, .content {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 10px;
+            text-align: left;
+        }
+
 
 
 
         .calendar {
             background-color: white;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
             width: 100%;
             text-align: center;
+
 
         }
 
@@ -92,6 +113,7 @@
             grid-template-columns: repeat(7, 1fr);
             gap: 1px;
             background-color: #2cb3bd;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .calendar-grid div {
@@ -110,9 +132,7 @@
         }
 
         .floor-plan {
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
         }
 
         .floor-plan h2 {
@@ -126,6 +146,7 @@
             width: 100%;
             border-collapse: collapse;
             font-size: 12px;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         table, th, td {
@@ -161,10 +182,29 @@
         }
 
         @media (max-width: 600px) {
-            .floor-plan table, .floor-plan th, .floor-plan td {
+            .content, .notice {
+                padding: 5px;
+                font-size: 0.8em;
+            }
+
+            .calendar {
+                width: 100%;
+            }
+
+            .calendar-grid div {
+                padding: 5px;
+            }
+
+
+            .floor-plan h2 {
+                font-size: 1em;
+            }
+
+            table, th, td {
                 font-size: 10px;
             }
-            .floor-plan th, .floor-plan td {
+
+            th, td {
                 padding: 6px;
             }
         }
@@ -213,13 +253,26 @@
         <img src="image/main.png" alt=""/>
         <h1>뜨거운 여름, 시원한 축제!</h1>
         <p>가재울고등학교 울림제에 초대합니다.</p>
+
+        <div class="notice">
+            <ul>
+                <li>안전하고 즐거운 울림제를 위한 가재울인들의 약속</li>
+                <li>부스 이용 시 차례대로 이용하기</li>
+                <li>공연 관람 시 제자리에 앉아서 보기</li>
+                <li>엘리베이터는 거동이 불편한 친구 먼저 태우기</li>
+                <li>쓰레기 버리기와 분리수거는 확실하게</li>
+                <li>이동 시 개인 소지품 잘 챙기기</li>
+
+            </ul>
+        </div>
+        <div class="content">
+            <h2>행사 안내</h2>
+            <p><strong>일시:</strong> 2024년 7월 18일</p>
+            <p><strong>시간:</strong> 오전 8시 ~ 오후 3시 30분</p>
+            <p><strong>장소:</strong> <a href="https://naver.me/57wOiNVX">가재울고등학교</a></p>
+        </div>
     </div>
-    <div class="content">
-        <h2>행사 안내</h2>
-        <p><strong>일시:</strong> 2024년 7월 18일</p>
-        <p><strong>시간:</strong> 오전 8시 30분 ~ 오후 3시 30분</p>
-        <p><strong>장소:</strong> <a href="https://naver.me/57wOiNVX">가재울고등학교</a></p>
-    </div>
+
     <div class="calendar">
         <div class="calendar-header">
             <h2>2024년 7월</h2>
@@ -308,44 +361,43 @@
     <h1 class="title">울림제 공연</h1>
     <h2 class="section-title">[1부] 3학년 공연</h2>
     <ul class="performance-list">
-        <li class="performance-item"><strong>사회 오프닝</strong> - 배경음악 : 해변의 여인(쿨)</li>
-        <li class="performance-item"><strong>숭실대학교 응원단 위너스</strong></li>
-        <li class="performance-item"><strong>댄스부 sdd</strong> - 곡 : 슈가코트(나띠), 십중팔구(nine out of ten), 내가 제일 잘나가(2ne1), takitaki (dj snake), baggy jeans (nct u), industry baby(lil nas x, jack harlow)</li>
-        <li class="performance-item"><strong>학생회 깜짝 공연</strong> - 곡 : DREAM (백현, 수지), Thrill ride (더보이즈)</li>
-        <li class="performance-item"><strong>매월 승리/박건희</strong> - 곡 : 야인(), Credit()</li>
-        <li class="performance-item"><strong>가재울 숲튽훈/박수아 팀</strong> - 곡 : Honey (김장훈)</li>
-        <li class="performance-item"><strong>댄스부 illusion</strong> - 곡 : DM(프로미스나인), smart(르세라핌), nobody knows(키스오브라이프), beatbox(nct dream), 바다보러갈래(효린)</li>
-        <li class="performance-item"><strong>밴드부 daystar</strong> - 곡 : 주지마(로꼬,화사), 인사(범진), 200%(악동뮤지션), 비밀번호486(윤하), 허니(박진영), 애상(쿨), 붉은노을(이문세)</li>
-        <li class="performance-item"><strong>사회 엔딩</strong></li>
-        <li class="performance-item"><strong>3학년 담임 선생님들 응원 영상</strong></li>
-        <li class="performance-item"><strong>나가실 때</strong> - 비타오백 드리기 - 배경음악 : 나인틴(세븐틴)</li>
+        <li class="performance-item"><strong>오프닝</strong> </li>
+        <li class="performance-item"><strong>숭실대학교 응원단 위너스</strong> </li>
+        <li class="performance-item"><strong>댄스부 sdd</strong> </li>
+        <li class="performance-item"><strong>학생회 깜짝 공연</strong> </li>
+        <li class="performance-item"><strong>매월 승리/박건희</strong> </li>
+        <li class="performance-item"><strong>가재울 숲튽훈/박수아 팀</strong> </li>
+        <li class="performance-item"><strong>댄스부 illusion</strong> </li>
+        <li class="performance-item"><strong>밴드부 daystar</strong> </li>
+        <li class="performance-item"><strong>엔딩</strong></li>
+
     </ul>
     <h2 class="section-title">[2부] 1, 2학년 공연</h2>
     <ul class="performance-list">
-        <li class="performance-item"><strong>1부 오프닝 사회</strong> - 배경음악 : 다시 여기 바닷가(싹쓰리)</li>
-        <li class="performance-item"><strong>연극부 데아트론</strong> - 극 : 꽃보다가재</li>
-        <li class="performance-item"><strong>댄스부 illusion</strong> - 곡 : DM(프로미스나인), smart(르세라핌), nobody knows(키스오브라이프), beatbox(nct dream), 바다보러갈래(효린)</li>
-        <li class="performance-item"><strong>쮸쌤의 댄싱스타/김채연 팀</strong> - 곡 : oh little girl(슬레이트), 첫만남은 계획대로 되지 않아(투어스)</li>
+        <li class="performance-item"><strong>1부 오프닝</strong> </li>
+        <li class="performance-item"><strong>연극부 데아트론</strong> - 꽃보다가재</li>
+        <li class="performance-item"><strong>댄스부 illusion</strong> </li>
+        <li class="performance-item"><strong>쮸쌤의 댄싱스타/김채연 팀</strong> </li>
         <li class="performance-item"><strong>복면가왕</strong>
             <ul class="sub-performance-list">
-                <li class="sub-performance-item">1. 바나나 알러지 개코원숭이 팀 : 낮밤(이영지)</li>
-                <li class="sub-performance-item">2. 얘야 노래란 이렇게 하는 법이란다 팀 : 한여름밤의 꿀(산이)</li>
-                <li class="sub-performance-item">3. 내 음색에 반할수박에 팀 : 응급실(이지)</li>
-                <li class="sub-performance-item">4. 너가 자는 사이 고막살인 팀 : 눈코입(태양)</li>
-                <li class="sub-performance-item">5. 우리는 자연을 사랑합니다 팀 : 모든날 모든순간(폴킴)</li>
+                <li class="sub-performance-item">1. 바나나 알러지 개코원숭이 팀 </li>
+                <li class="sub-performance-item">2. 얘야 노래란 이렇게 하는 법이란다 팀 </li>
+                <li class="sub-performance-item">3. 내 음색에 반할수박에 팀 </li>
+                <li class="sub-performance-item">4. 너가 자는 사이 고막살인 팀 </li>
+                <li class="sub-performance-item">5. 우리는 자연을 사랑합니다 팀 </li>
             </ul>
         </li>
-        <li class="performance-item"><strong>학생회 깜짝 공연</strong> - 곡 : Thrill ride (더보이즈)</li>
-        <li class="performance-item"><strong>쉬는시간</strong></li>
-        <li class="performance-item"><strong>2부 오프닝 사회</strong> - 배경음악 : 해변의 여인(쿨)</li>
+        <li class="performance-item"><strong>학생회 깜짝 공연</strong> </li>
+        <li class="performance-item"><strong>쉬는시간, 경품 추첨 </strong></li>
+        <li class="performance-item"><strong>2부 오프닝</strong> </li>
         <li class="performance-item"><strong>복면가왕 1등 발표 및 우승 팀 앵콜</strong></li>
-        <li class="performance-item"><strong>댄스부 Sdd</strong> - 곡 : 슈가코트(나띠), 십중팔구(nine out of ten), 내가 제일 잘나가(2ne1), takitaki (dj snake), baggy jeans (nct u), industry baby(lil nas x, jack harlow)</li>
-        <li class="performance-item"><strong>MC공연</strong> - 곡 : Dream (백현, 수지)</li>
-        <li class="performance-item"><strong>아이리스/양윤지 팀</strong> - 곡 : eft&right(세븐틴), 덤디덤디(여자아이들)</li>
-        <li class="performance-item"><strong>뽕따/이예은 팀</strong> - 곡 : 애상(쿨)</li>
-        <li class="performance-item"><strong>F5/김세원 팀</strong> - 곡 : attention(뉴진스), 헐(블락비), 댄스브레이크(블랙핑크)</li>
-        <li class="performance-item"><strong>밴드부 daystar</strong> - 곡 : 주지마(로꼬,화사), 인사(범진), 200%(악동뮤지션), 비밀번호486(윤하), 허니(박진영), 애상(쿨), 붉은노을(이문세)</li>
-        <li class="performance-item"><strong>엔딩 사회</strong> - 배경음악 : 에이틴(세븐틴)</li>
+        <li class="performance-item"><strong>댄스부 Sdd</strong> </li>
+        <li class="performance-item"><strong>MC공연</strong> </li>
+        <li class="performance-item"><strong>아이리스/양윤지 팀</strong> </li>
+        <li class="performance-item"><strong>뽕따/이예은 팀</strong> </li>
+        <li class="performance-item"><strong>F5/김세원 팀</strong> </li>
+        <li class="performance-item"><strong>밴드부 daystar</strong> </li>
+        <li class="performance-item"><strong>엔딩</strong> </li>
     </ul>
 
 
