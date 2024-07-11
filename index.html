@@ -238,6 +238,24 @@
             padding: 5px;
             border-radius: 3px;
         }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -380,6 +398,11 @@
                 <td>물리화학실험탐구</td>
             </tr>
         </table>
+        <button class="button"
+                onclick="window.open('https://docs.google.com/spreadsheets/d/' +
+                 '1cFiXhN7YnqorckdRbr8OvDybeZ0TasPlHFxgCHq0ZXA/edit?usp=sharing', '_blank')">
+            부스마당 웨이팅 현황
+        </button>
     </div>
     <h1 class="title">울림제 공연</h1>
     <h2 class="section-title">[1부] 3학년 공연</h2>
