@@ -83,15 +83,12 @@
             text-align: left;
         }
 
-
         .calendar {
             background-color: white;
             border-radius: 10px;
             box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
             width: 100%;
             text-align: center;
-
-
         }
 
         .calendar-header {
@@ -192,7 +189,6 @@
                 padding: 5px;
             }
 
-
             .floor-plan h2 {
                 font-size: 1em;
             }
@@ -205,7 +201,6 @@
                 padding: 6px;
             }
         }
-
 
         .section-title {
             color: #333;
@@ -256,7 +251,26 @@
         .button:hover {
             background-color: #03fd1c;
         }
+
+        .swiper-container {
+            width: 100%;
+            max-width: 300px; /* Adjust this value as needed */
+            margin: 20px auto;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            max-width: 100%;
+            height: auto;
+        }
+
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
 <div class="container">
@@ -402,12 +416,22 @@
                 <td>물리화학실험탐구</td>
             </tr>
         </table>
-        <button class="button"
-                onclick="window.open('https://docs.google.com/spreadsheets/d/' +
-                 '1cFiXhN7YnqorckdRbr8OvDybeZ0TasPlHFxgCHq0ZXA/edit?usp=sharing', '_blank')">
-            부스마당 웨이팅 현황
-        </button>
     </div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="poster/1.jpg" alt="Poster 1"></div>
+            <div class="swiper-slide"><img src="poster/2.jpg" alt="Poster 2"></div>
+            <div class="swiper-slide"><img src="poster/3.jpg" alt="Poster 3"></div>
+            <div class="swiper-slide"><img src="poster/4.jpg" alt="Poster 4"></div>
+        </div>
+    </div>
+    <button class="button"
+            onclick="window.open('https://docs.google.com/spreadsheets/d/' +
+                 '1cFiXhN7YnqorckdRbr8OvDybeZ0TasPlHFxgCHq0ZXA/edit?usp=sharing', '_blank')">
+        부스마당 웨이팅 현황
+    </button>
+
     <h1 class="title">울림제 공연</h1>
     <h2 class="section-title">[1부] 3학년 공연</h2>
     <ul class="performance-list">
@@ -450,12 +474,20 @@
         <li class="performance-item"><strong>엔딩</strong></li>
     </ul>
 
-
     <div class="footer">
         <p>리플렛을 QR코드로 다른 친구들에게도 공유해주세요.</p>
         <img src="image/qrcode.png" alt="" style="display: block; margin: 0 auto; max-width: 150px;"/>
     </div>
-
 </div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+    });
+</script>
 </body>
 </html>
