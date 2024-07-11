@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="ko"><!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -84,15 +83,12 @@
             text-align: left;
         }
 
-
         .calendar {
             background-color: white;
             border-radius: 10px;
             box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
             width: 100%;
             text-align: center;
-
-
         }
 
         .calendar-header {
@@ -130,7 +126,6 @@
         }
 
         .floor-plan {
-
         }
 
         .floor-plan h2 {
@@ -193,7 +188,6 @@
                 padding: 5px;
             }
 
-
             .floor-plan h2 {
                 font-size: 1em;
             }
@@ -206,7 +200,6 @@
                 padding: 6px;
             }
         }
-
 
         .section-title {
             color: #333;
@@ -257,6 +250,27 @@
         .button:hover {
             background-color: #03fd1c;
         }
+
+        .swiper-container.custom-swiper {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .swiper-container.custom-swiper .swiper-wrapper {
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+        .swiper-container.custom-swiper .swiper-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-container.custom-swiper .swiper-slide img {
+            max-width: 100%;
+            max-height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -267,19 +281,10 @@
         <p>가재울고등학교 울림제에 초대합니다.</p>
 
         <div class="notice">
-            <ul>
-                <li>안전하고 즐거운 울림제를 위한 가재울인들의 약속</li>
-                <li>부스 이용 시 차례대로 이용하기</li>
-                <li>공연 관람 시 제자리에 앉아서 보기</li>
-                <li>엘리베이터는 거동이 불편한 친구 먼저 태우기</li>
-                <li>쓰레기 버리기와 분리수거는 확실하게</li>
-                <li>이동 시 개인 소지품 잘 챙기기</li>
                 <button class="button"
-                        onclick="window.open('https://docs.google.com/spreadsheets/d/1SCTam' +
-                         'uv2D08tNWSbN9wgBMLvEp_aHZupPQl8WN9ZG0g/edit?usp=sharing', '_blank')">
+                        onclick="window.open('https://docs.google.com/spreadsheets/d/1SCTamuv2D08tNWSbN9wgBMLvEp_aHZupPQl8WN9ZG0g/edit?usp=sharing', '_blank')">
                     실시간 공지사항 & 분실물
                 </button>
-            </ul>
         </div>
         <div class="content">
             <h1>행사 안내</h1>
@@ -301,9 +306,7 @@
             <div class="day-header">목</div>
             <div class="day-header">금</div>
             <div class="day-header">토</div>
-
             <div></div>
-
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -404,11 +407,16 @@
             </tr>
         </table>
         <button class="button"
-                onclick="window.open('https://docs.google.com/spreadsheets/d/' +
-                 '1cFiXhN7YnqorckdRbr8OvDybeZ0TasPlHFxgCHq0ZXA/edit?usp=sharing', '_blank')">
+                onclick="window.open('https://docs.google.com/spreadsheets/d/1cFiXhN7YnqorckdRbr8OvDybeZ0TasPlHFxgCHq0ZXA/edit?usp=sharing', '_blank')">
             부스마당 웨이팅 현황
         </button>
     </div>
+
+    <div class="swiper-container custom-swiper">
+        <div class="swiper-wrapper">
+        </div>
+    </div>
+
     <h1 class="title">울림제 공연</h1>
     <h2 class="section-title">[1부] 3학년 공연</h2>
     <ul class="performance-list">
@@ -421,8 +429,8 @@
         <li class="performance-item"><strong>댄스부 illusion</strong></li>
         <li class="performance-item"><strong>밴드부 daystar</strong></li>
         <li class="performance-item"><strong>엔딩</strong></li>
-
     </ul>
+
     <h2 class="section-title">[2부] 1, 2학년 공연</h2>
     <ul class="performance-list">
         <li class="performance-item"><strong>1부 오프닝</strong></li>
@@ -451,12 +459,48 @@
         <li class="performance-item"><strong>엔딩</strong></li>
     </ul>
 
-
     <div class="footer">
         <p>리플렛을 QR코드로 다른 친구들에게도 공유해주세요.</p>
         <img src="image/qrcode.png" alt="" style="display: block; margin: 0 auto; max-width: 150px;"/>
     </div>
-
 </div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.custom-swiper', {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    const images = [
+        'poster/1.jpg',
+        'poster/2.jpg',
+        'poster/3.jpg',
+        'poster/4.jpg',
+    ];
+
+    const swiperWrapper = document.querySelector('.custom-swiper .swiper-wrapper');
+
+    images.forEach(src => {
+        const slide = document.createElement('div');
+        slide.classList.add('swiper-slide');
+        const img = document.createElement('img');
+        img.src = src;
+        slide.appendChild(img);
+        swiperWrapper.appendChild(slide);
+    });
+
+    swiper.update();
+</script>
 </body>
 </html>
