@@ -234,24 +234,7 @@
             border-radius: 3px;
         }
 
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-            border-radius: 5px;
-            font-family: 'Do Hyeon', sans-serif;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
-        }
 
-        .button:hover {
-            background-color: #03fd1c;
-        }
 
         .swiper-container {
             width: 100%;
@@ -288,6 +271,35 @@
         }
 
 
+        .button {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            font-family: 'Do Hyeon', sans-serif;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .button img {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            margin-top: 10px;
+            object-fit: contain;
+        }
+
+        .button:hover {
+            background-color: #03fd1c;
+        }
+
+
     </style>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 </head>
@@ -297,18 +309,24 @@
         <img src="image/main.png" alt=""/>
         <h1>뜨거운 여름, 시원한 축제!</h1>
         <p>가재울고등학교 울림제에 초대합니다.</p>
-
+        <h1>공지사항</h1>
         <div class="notice">
+
             <ul>
-                <button class="button"
-                        onclick="window.open('https://docs.google.com/spreadsheets/d/1SCTam' +
-                         'uv2D08tNWSbN9wgBMLvEp_aHZupPQl8WN9ZG0g/edit?usp=sharing', '_blank')">
-                    실시간 공지사항 & 분실물
+                <button class="button" onclick="window.open('https://docs.google.com/spreadsheets/d/1SCTamuv2D08tNWSbN9wgBMLvEp_aHZupPQl8WN9ZG0g/edit?usp=sharing', '_blank')">
+                    실시간 공지사항 & 분실물 <img src="icon/click.png" alt="Click icon" style="width: 20px; height: 20px; margin-left: 10px;">
                 </button>
+
+                <button class="button" onclick="window.open('pdf/student_notice.pdf', '_blank')">
+                    학생 공지사항 보기 <img src="icon/click.png" alt="Click icon" style="width: 20px; height: 20px; margin-left: 10px;">
+                </button>
+
+
             </ul>
         </div>
+        <h1>행사 안내</h1>
         <div class="content">
-            <h1>행사 안내</h1>
+
             <p><strong>일시:</strong> 2024년 7월 18일</p>
             <p><strong>시간:</strong> 오전 8시 ~ 오후 3시 30분</p>
             <p><strong>장소:</strong> <a href="https://naver.me/57wOiNVX">가재울고등학교</a></p>
